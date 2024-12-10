@@ -5,6 +5,10 @@
     grid-template-columns: minmax(0, 1fr);
 }
 
+#projects {
+    margin-top: 25px;
+}
+
 body {
     background-color: rgb(96, 114, 116);
     margin: 0%;
@@ -13,6 +17,9 @@ body {
 header {
     text-align: center;
     color: rgb(250, 238, 209);
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;;
 }
 
 footer {
@@ -20,6 +27,28 @@ footer {
     text-align: center;
     color: rgb(96, 114, 116);
 }
+a {
+    color: #000;
+    position: relative;
+    text-decoration: none;
+  }
+  
+  a::before {
+    background: rgb(250, 238, 209);
+    content: "";
+    inset: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: bottom;
+    transition: transform .5s ease-in-out;
+    border-radius: 12px;
+    z-index: -1;
+  }
+  
+  a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom;
+  }
 
 #navbar {
     flex-direction: row;
@@ -38,7 +67,13 @@ footer {
     width: 30vh;
     height: 30vh;
     border-radius: 12px;
-    background-color: rgb(250, 238, 209);
+ 
+    
+}
+
+.title {
+    color: rgb(96, 114, 116);
+    text-align: center;
 }
 
 
@@ -46,4 +81,8 @@ footer {
     #navbar {
       flex-direction: column; 
     }
+    a:hover::before {
+        transform: scaleX(1);
+        transform-origin: top;
+      }
   }
