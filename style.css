@@ -1,5 +1,13 @@
+#portfolio {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: minmax(0, 1fr);
+}
+
 body {
     background-color: rgb(96, 114, 116);
+    margin: 0%;
 }
 
 header {
@@ -7,9 +15,17 @@ header {
     color: rgb(250, 238, 209);
 }
 
+footer {
+    background-color: rgb(178, 165, 155);
+    text-align: center;
+    color: rgb(96, 114, 116);
+}
+
 #navbar {
+    flex-direction: row;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     gap: 10vh;
     flex: none;
 }
@@ -26,8 +42,8 @@ header {
 }
 
 
-@media (max-width: 930px) {
-    .navbar {
+@media (max-width: 800px) {
+    #navbar {
       flex-direction: column; 
     }
   }
