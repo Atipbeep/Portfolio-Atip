@@ -1,0 +1,33 @@
+body {
+    background-color: rgb(96, 114, 116);
+}
+
+header {
+    text-align: center;
+    color: rgb(250, 238, 209);
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10vh;
+    flex: none;
+}
+
+.item1,.item2,.item3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: none;
+    width: 30vh;
+    height: 30vh;
+    border-radius: 12px;
+    background-color: rgb(250, 238, 209);
+}
+
+
+@media (max-width: 930px) {
+    .navbar {
+      flex-direction: column; 
+    }
+  }
